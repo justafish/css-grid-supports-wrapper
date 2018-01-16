@@ -31,9 +31,9 @@ tbd
 
 ```
 import stylis from 'stylis';
-import stylisPlugin from 'css-grid-supports-wrapper/stylis'; 
+import { stylis } as gridWrapper from 'css-grid-supports-wrapper';
 
-stylis.use(stylisPlugin);
+stylis.use(gridWrapper);
 
 const test = stylis(``, `
   h1 {
