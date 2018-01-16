@@ -1,2 +1,3 @@
-// eslint-disable-next-line import/prefer-default-export
-export { default as stylis } from './stylis';
+import stylis from './stylis';
+
+module.exports.stylis = stylis;
