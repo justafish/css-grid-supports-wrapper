@@ -1,6 +1,6 @@
 {
   "name": "css-grid-supports-wrapper",
-  "version": "0.0.4",
+  "version": "1.0.0",
   "description": "Processes CSS to wrap CSS grid usage in `@supports`. This is typically used to have browsers like IE11 fall back to a mobile design instead of trying to render with it's partial CSS Grid implementation.",
   "main": "./dist/index.js",
   "scripts": {
