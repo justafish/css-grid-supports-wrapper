@@ -27,6 +27,41 @@ const output = stylis(``, `
   }
 `);
 
-const expectedOutput = 'div{}@supports(display:grid){div{display:grid;}}h1{width:100px;font-style:italic;}@supports(display:grid){h1{grid-column-start:span 12;}}h2.class{}@supports(display:grid){h2.class{grid-column-start:span 10;}}.some-stuff,.more-stuff{color:red;}@supports(display:grid){.some-stuff,.more-stuff{grid-column-start:span 8;}}';
+let expectedOutput = `
+div{}
+@supports(display:grid){
+  div{
+    display:grid;
+  }
+}
+h1{
+  width:100px;
+  font-style:italic;
+}
+@supports(display:grid) {
+  h1{
+    grid-column-start:span 12;
+  }
+}
+h2.class{}
+@supports(display:grid) {
+  h2.class{
+    grid-column-start:span 10;
+  }
+}
+.some-stuff,.more-stuff {
+  color:red;
+}
+@supports(display:grid) {
+  .some-stuff,.more-stuff{
+    grid-column-start:span 8;
+  }
+}`;
 
-assert.equal(output, expectedOutput, `Outputted CSS was not correct:$\n${output}`);
+expectedOutput = expectedOutput
+  .replace(/\n|\r/g, '')
+  .replace(/\s*{\s*/g, '{')
+  .replace(/\s*}\s*/g, '}')
+  .replace(/;\s*/g, ';');
+
+assert.equal(output, expectedOutput, `Outputted CSS was not correct:$\n${output}\n\nExpected:\n${expectedOutput}`);

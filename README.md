@@ -22,10 +22,7 @@ to:
 ```
 
 
-## PostCSS Usage
-tbd
-
-## Stylis Usage
+## Usage With Stylis
 
 `npm install css-grid-supports-wrapper`
 

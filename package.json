@@ -4,8 +4,8 @@
   "description": "Processes CSS to wrap CSS grid usage in `@supports`. This is typically used to have browsers like IE11 fall back to a mobile design instead of trying to render with it's partial CSS Grid implementation.",
   "main": "./dist/index.js",
   "scripts": {
-    "test": "./node_modules/.bin/eslint src/**/*.js && ./node_modules/.bin/babel-node src/test.js",
-    "build": "./node_modules/.bin/babel src --out-dir dist",
+    "test": "eslint src/**/*.js && babel-node src/test.js",
+    "build": "babel src --out-dir dist",
     "prepublish": "npm run build"
   },
   "repository": {
@@ -16,7 +16,6 @@
     "cssgrid",
     "css-in-js",
     "stylis",
-    "postcss",
     "emotion"
   ],
   "author": "Sally Young <sally@justafish.co.uk> (http://www.justafish.co.uk)",
